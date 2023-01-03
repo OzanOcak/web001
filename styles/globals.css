@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body {
+        @apply dark:bg-gray-800 dark:text-blue-100;
+    }
+}
+
+@layer utilities {
+    .animation-delay-2000 {
+      animation-delay: 1s;
+    }
+    .animation-delay-4000 {
+      animation-delay: 2s;
+    }
+  }
