@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
 
     <html>
-      <body className="mx-auto max-w-[56rem] px-6">
+      <body className="max-w-md mx-auto sm:max-w-2xl lg:max-w-5xl">
         <Providers>
           <div>
             <Header />

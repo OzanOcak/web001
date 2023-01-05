@@ -1,3 +1,4 @@
+import SearchBlog from "../../components/SearchBlog";
 import getPostMetadata from "../../components/getPostMetadata";
 import PostPreview from "../../components/PostPreview";
 
@@ -9,8 +10,8 @@ const BlogPage = () => {
 
   return (
     <div>
-      <div>search:</div>
-      <div className="grid grid-cols-1 md:grid-cols-1 gap-4">{postPreviews}</div>
+      <SearchBlog />
+      <div className="grid grid-cols-1 max-w-[40rem]  mx-auto  gap-4">{postPreviews}</div>
     </div>
     
   );
