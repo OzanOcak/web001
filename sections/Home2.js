@@ -2,7 +2,7 @@ import GlowingBox from "../components/GlowingBox";
 import CGB from "../components/CenterGlowingBox";
 const Home2 = () => {
   return (
-    <div className="left-3">
+    <div className="">
       <ol className="relative border-l  border-green-200 dark:border-gray-700">
         <li className="mb-10 ml-6">
           <span className="absolute flex items-center justify-center w-6 h-6 bg-green-500 rounded-full -left-3 sm:-right-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">

@@ -13,17 +13,17 @@ const CGB = () => {
               </div>
             </div>
             <div>
-              <div className="w-24 h-6 rounded-lg bg-blue-300"></div>
+              <div className="w-6 sm:w-24 h-6 rounded-lg bg-blue-300"></div>
             </div>
           </div>
           <div className="p-5 bg-white rounded-lg flex items-center justify-between space-x-8">
             <div className="flex-1">
-              <div className="h-6 w-52 bg-gray-300 rounded font-bold px-2 dark:text-green-700 z-30">
+              <div className="h-6 w-40 bg-gray-300 rounded font-bold px-2 dark:text-green-700 z-30">
                 full stack
               </div>
             </div>
             <div>
-              <div className="w-20 h-6 rounded-lg bg-green-300 "></div>
+              <div className="w-6 sm:w-20 h-6 rounded-lg bg-green-300 "></div>
             </div>
           </div>
           <div className="p-5 bg-white rounded-lg flex items-center justify-between space-x-8">
@@ -33,7 +33,7 @@ const CGB = () => {
               </div>
             </div>
             <div>
-              <div className="w-28 h-6 rounded-lg bg-red-300"></div>
+              <div className="w-6 sm:w-28 h-6 rounded-lg bg-red-300"></div>
             </div>
           </div>
         </div>

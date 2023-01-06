@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav class="relative">
-      <div className=" justify-between absolute z-50 w-full bg-white dark:bg-gray-800 bg-opacity-70 dark:bg-opacity-40">
+      <div className=" justify-between absolute z-50 w-full bg-white dark:bg-gray-800 bg-opacity-90">
         <div className="px-4 py-2 text-black dark:text-white flex  justify-between ">
           <div className=" relative h-10 w-10  overflow-hidden object-cover rounded-lg grayscale-60  ">
             <Link href="/">
@@ -51,7 +51,7 @@ const Navbar = () => {
             <ul className=" pt-2 mb-10">
               {navigation.map((nav) => (
                 <Link href={nav.path}>
-                  <li className="dropdown md:inline-block cursor-pointer hover:text-gray-500 border-b md:border-none py-2 px-3 relative font-bold">
+                  <li className="dropdown md:inline-block cursor-pointer hover:text-gray-300 border-b md:border-none py-2 px-3 relative font-bold">
                     {nav.label}
                   </li>
                 </Link>

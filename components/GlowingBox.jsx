@@ -1,6 +1,6 @@
 const GlowingBox = () => {
   return (
-    <div class="px-0  sm:px-2 py-8 w-[26rem]">
+    <div class="px-0  sm:px-2 py-8 w-[20rem]">
       <div class="grid gap-8 items-start justify-start">
         <div class="relative group">
           <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
@@ -21,7 +21,7 @@ const GlowingBox = () => {
                 />
               </svg>
             </span>
-            <span class="pl-6 text-blue-400 group-hover:text-gray-100 transition duration-200">
+            <span class="pl-2 sm:pl-6 text-blue-400 group-hover:text-gray-100 transition duration-200">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
               doloribus sint sequi aut ex quas hic, magni modi fuga quo, quidem
               ipsum tenetur non cupiditate illo, repudiandae ea omnis

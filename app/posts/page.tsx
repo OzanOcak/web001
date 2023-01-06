@@ -10,7 +10,7 @@ const BlogPage = () => {
 
   return (
     <div>
-      <div className=""><SearchBlog /></div>
+      <SearchBlog />
       <div className="grid grid-cols-1 max-w-[40rem]  mx-auto  gap-4">{postPreviews}</div>
     </div>
     

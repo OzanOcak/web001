@@ -26,7 +26,9 @@ const Hero = () => {
             this is my new website and I am still working on it, by Friday it
             should have been done
           </p>
-          <Button className="bg-blue-600 text-white px-6">Hire Me!</Button>
+          <div className="-mt-[2rem] -ml-[rem]">
+            <Button className="bg-blue-600 text-white px-6  ">Hire Me!</Button>
+          </div>
         </div>
       </div>
     </section>
