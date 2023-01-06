@@ -3,9 +3,9 @@ import CGB from "../components/CenterGlowingBox";
 const Home2 = () => {
   return (
     <div className="left-3">
-      <ol className="relative border-r border-gray-200 dark:border-gray-700">
+      <ol className="relative border-l  border-green-200 dark:border-gray-700">
         <li className="mb-10 ml-6">
-          <span className="absolute flex items-center justify-center w-6 h-6 bg-green-500 rounded-full -right-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+          <span className="absolute flex items-center justify-center w-6 h-6 bg-green-500 rounded-full -left-3 sm:-right-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
             <svg
               ariaHidden="true"
               className="w-3 h-3 text-blue-600 dark:text-blue-400"
@@ -23,7 +23,7 @@ const Home2 = () => {
           <GlowingBox />
         </li>
         <li className="mb-10 ml-6">
-          <span className="absolute flex items-center justify-center w-6 h-6 bg-red-500 rounded-full -right-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+          <span className="absolute flex items-center justify-center w-6 h-6 bg-red-500 rounded-full -left-3 sm:-right-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-900">
             <svg
               ariaHidden="true"
               className="w-3 h-3 text-blue-600 dark:text-blue-400"
@@ -41,7 +41,7 @@ const Home2 = () => {
           <CGB />
         </li>
         <li className="ml-6">
-          <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -right-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+          <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 sm:-right-3 ring-8 ring-white dark:ring-gray-900 dark:bg-red-900">
             <svg
               ariaHidden="true"
               className="w-3 h-3 text-blue-600 dark:text-blue-400"

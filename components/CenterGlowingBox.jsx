@@ -1,6 +1,6 @@
 const CGB = () => {
   return (
-    <div className="min-h-screen flex  flex-col items-center justify-center px-16">
+    <div className="min-h-screen flex  flex-col items-center justify-center px-1 sm:px-16">
       <div className="relative w-full max-w-lg">
         <div className="absolute top-0 -left-4 w-72 h-72 bg-red-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
         <div className="absolute top-0 -right-4 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000 z-10"></div>
@@ -18,7 +18,7 @@ const CGB = () => {
           </div>
           <div className="p-5 bg-white rounded-lg flex items-center justify-between space-x-8">
             <div className="flex-1">
-              <div className="h-6 w-56 bg-gray-300 rounded font-bold px-2 dark:text-green-700 z-30">
+              <div className="h-6 w-52 bg-gray-300 rounded font-bold px-2 dark:text-green-700 z-30">
                 full stack
               </div>
             </div>
