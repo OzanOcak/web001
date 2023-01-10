@@ -3,8 +3,8 @@ const { default: DarkModeButton } = require("../components/DarkModeButton");
 import { EnvelopeIcon, MoonIcon } from "@heroicons/react/24/solid";
 import logo from "../public/images/logo.png";
 import Image from "next/image";
-import Navbar from "../components/Navbar";
-
+//import Navbar from "../components/Navbar";
+import Navbar from "../components/MobileMenu";
 const Header = () => {
   const navigation = [
     { label: "Home", path: "/" },
