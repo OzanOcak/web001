@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
 
     <html>
-      <body className="bg-white dark:gray-800 duration-1000 ease-linear max-w-md mx-auto sm:max-w-2xl lg:max-w-5xl">
+      <body className="bg-white dark:gray-800 duration-1000 ease-linear max-w-md mx-auto sm:max-w-xl md:max-w-3xl lg:max-w-5xl">
         <Providers>
           <div>
             <Header />

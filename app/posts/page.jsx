@@ -10,7 +10,7 @@ const BlogPage = () => {
   ));
   console.log(postMetadata);
   return (
-    <div>
+    <div className="min-h-screen">
       <Search users={postMetadata} />
     </div>
   );

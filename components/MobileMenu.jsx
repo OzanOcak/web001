@@ -18,7 +18,7 @@ const Nav = () => {
     <nav className="flex items-center justify-between pt-5  ">
       <Image
         src={open ? iconClose : iconHamburger}
-        className="md:hidden  fixed right-5 cursor-pointer z-20 top-9  bg-gray-100 dark:bg-gray-800"
+        className="md:hidden  fixed right-5 cursor-pointer z-20 top-9  bg-gray-100 "
         alt="icon"
         onClick={() => setopen(!open)}
       />
@@ -38,14 +38,15 @@ const Nav = () => {
       <div className="flex">
         <div className="nav-list">
           <ul
-            className={` backdrop-blur-md bg-[#ffffff14] dark:bg-[#111010c0] sm:dark:bg-gray-800 md:pl-10 pr-28 md:static fixed duration-500 ease-linear top-0 md:h-auto h-screen z-10 ${
+            className={` backdrop-blur-md  md:pl-10 pr-28 md:static fixed duration-500 ease-linear 
+            top-0 md:h-auto h-screen z-10 rounded-3xl ${
               !open ? "right-[-100%] " : "right-0"
             }`}
           >
             {menus.map((menu, index) => (
               <li
                 key={index}
-                className="md:inline-block mt-4 md:ml-10 ml-5 md:my-0 my-6 border-b-2 border-transparent  hover:border-white duration-300"
+                className="md:inline-block mt-4 md:ml-10 ml-5 md:my-0 my-6 border-b-2 border-transparent drop-shadow-2xl hover:border-black dark:hover:border-white duration-300"
               >
                 <Link
                   href={menu.path}
@@ -58,7 +59,7 @@ const Nav = () => {
             ))}
           </ul>
         </div>
-        <div className="p-2 px-1 pr-14 pt-3 sm:pr-6 md:pr-0">
+        <div className="p-2 px-1 pr-14 pt-3 sm:pr-6 md:pr-4 lg:pr-0">
           <DarkModeButton />
         </div>
       </div>
