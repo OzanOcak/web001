@@ -1,7 +1,31 @@
+"use client";
 import Image from "next/image";
 import img from "../../public/images/toronto2.svg";
+import { useState } from "react";
+import sendContactForm from "../../lib/api";
+
+const initValues = { name: "", email: "", message: "" };
 
 const About = () => {
+  const [state, setState] = useState(initValues);
+  const { values } = state;
+
+  const handleChange = ({ target }) =>
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }));
+
+  const onSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+    }));
+    await sendContactForm(values);
+  };
+
   return (
     <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto  text-black dark:text-white rounded-lg shadow-lg">
       <div className="flex flex-col justify-between sm:justify-start">
@@ -38,6 +62,8 @@ const About = () => {
             type="text"
             name="name"
             id="name"
+            value={values?.name}
+            onChange={handleChange}
             required
             placeholder=""
           />
@@ -59,6 +85,8 @@ const About = () => {
             type="email"
             name="email"
             id="email"
+            value={values?.email}
+            onChange={handleChange}
             required
             placeholder=""
           />
@@ -78,6 +106,8 @@ const About = () => {
           <textarea
             name="message"
             id="message"
+            value={values?.message}
+            onChange={handleChange}
             required
             className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:ring-2 focus:shadow-outline"
           ></textarea>
@@ -90,7 +120,8 @@ const About = () => {
         <div className="mt-8">
           <button
             type="submit"
-            className="uppercase text-sm font-bold tracking-wide bg-blue-400 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
+            onClick={onSubmit}
+            className=" uppercase text-sm font-bold tracking-wide bg-blue-400 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
           >
             Send Message
           </button>
