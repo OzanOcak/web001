@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "components/Button.jsx", "sections/Hero.js", "components/SearchBlog.jsx", "components/getPostMetadata.js", "app/posts/page.jsx"  ],
+, "components/Button.jsx", "sections/Hero.js", "components/SearchBlog.jsx", "components/getPostMetadata.js", "app/posts/page.jsx", "app/about/page.jsx", "app/about/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

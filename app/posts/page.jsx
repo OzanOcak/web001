@@ -8,7 +8,7 @@ const BlogPage = () => {
   const postPreviews = postMetadata.map((post) => (
     <PostPreview key={post.slug} {...post} />
   ));
-  console.log(postMetadata);
+  //console.log(postMetadata);
   return (
     <div className="min-h-screen">
       <Search users={postMetadata} />
