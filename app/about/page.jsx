@@ -106,7 +106,7 @@ const About = () => {
             value={values?.name}
             onChange={handleChange}
             required
-            placeholder=""
+            placeholder="Alice Doe"
             autoComplete="off"
           />
           <p
@@ -134,7 +134,7 @@ const About = () => {
             value={values?.email}
             onChange={handleChange}
             required
-            placeholder=""
+            placeholder="ADoe@mail.com"
             autoComplete="off"
           />
           <p
@@ -159,6 +159,7 @@ const About = () => {
             id="message"
             value={values?.message}
             onChange={handleChange}
+            placeholder="hello 👋"
             required
             autoComplete="off"
             className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:ring-2 focus:shadow-outline"
