@@ -4,13 +4,22 @@ import img from "../../public/images/toronto2.svg";
 import { useState } from "react";
 import sendContactForm from "../../lib/api";
 
+const USER_REGEX = /^[A-z][A-z0-9-_]{1,23}\s[A-z][A-z0-9-_]{1,23}$/;
+const EMAIL_REGEX =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const initValues = { name: "", email: "", message: "" };
 
 const About = () => {
   const [state, setState] = useState(initValues);
+  const [validName, setValidName] = useState(false);
+  const [validEmail, setValidEmail] = useState(false);
+  const [validMessage, setValidMessage] = useState(false);
+  const [disable, setDisable] = useState(true);
+  const [success, setSuccess] = useState(false);
+
   const { values } = state;
 
-  const handleChange = ({ target }) =>
+  const handleChange = ({ target }) => {
     setState((prev) => ({
       ...prev,
       values: {
@@ -18,12 +27,44 @@ const About = () => {
         [target.name]: target.value,
       },
     }));
+    switch (target.name) {
+      case "name":
+        setValidName(USER_REGEX.test(target.value));
+        //if (validName) console.log("name is OK");
+        break;
+      case "email":
+        setValidEmail(EMAIL_REGEX.test(target.value));
+        //  if (validEmail) console.log("email is OK");
+        break;
+      case "message":
+        setValidMessage(target.value.split("").length > 5);
+        //  if (validMessage) console.log("message is ok");
+        break;
+      default:
+      // code block
+    } // end of switch
+    if (validName && validEmail && validMessage) {
+      setDisable(false);
+      //console.log("able");
+    } else {
+      setDisable(true);
+      // console.log("disable");
+    }
+  };
 
-  const onSubmit = async () => {
+  const onSubmit = async (e) => {
+    e.preventDefault();
     setState((prev) => ({
       ...prev,
     }));
+    // console.log(values);
     await sendContactForm(values);
+    setSuccess(true);
+    setTimeout(() => setSuccess(false), 2000);
+    setDisable(true);
+    values.name = "";
+    values.email = "";
+    values.message = "";
   };
 
   return (
@@ -66,8 +107,13 @@ const About = () => {
             onChange={handleChange}
             required
             placeholder=""
+            autoComplete="off"
           />
-          <p className="invisible peer-invalid:visible text-red-700 dark:text-red-400 font-bold">
+          <p
+            className={` peer-invalid:visible text-red-700 dark:text-red-400 font-bold ${
+              values?.name && !validName ? "visible" : "invisible"
+            }`}
+          >
             * Please enter your name
           </p>
         </div>
@@ -89,8 +135,13 @@ const About = () => {
             onChange={handleChange}
             required
             placeholder=""
+            autoComplete="off"
           />
-          <p className="invisible peer-invalid:visible text-red-700 dark:text-red-400 font-bold">
+          <p
+            className={` peer-invalid:visible text-red-700 dark:text-red-400 font-bold ${
+              values?.email && !validEmail ? "visible" : "invisible"
+            }`}
+          >
             * Please enter a valid email address
           </p>
         </div>
@@ -109,22 +160,38 @@ const About = () => {
             value={values?.message}
             onChange={handleChange}
             required
+            autoComplete="off"
             className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:ring-2 focus:shadow-outline"
           ></textarea>
-          <p className="invisible peer-invalid:visible text-red-700 dark:text-red-400 font-bold">
-            * This field cannot be empty
+          <p
+            className={` peer-invalid:visible text-red-700 dark:text-red-400 font-bold ${
+              values?.message && !validMessage ? "visible" : "invisible"
+            }`}
+          >
+            * Please tell me something
           </p>
         </div>
 
         {/* Send Button */}
-        <div className="mt-8">
+        <div className="flex justify-evenly mt-8">
           <button
             type="submit"
             onClick={onSubmit}
-            className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+            disabled={disable}
+            className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs
+              leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg
+            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800
+              active:shadow-lg transition duration-150 ease-in-out disabled:bg-blue-200"
           >
             Send Message
           </button>
+          <div
+            className={`text-green-500 font-bold ${
+              success ? "opacity-100" : "opacity-0"
+            } `}
+          >
+            Successfully sent! 🎉🎉🎉
+          </div>
         </div>
       </div>
     </div>
