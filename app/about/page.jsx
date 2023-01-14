@@ -3,7 +3,7 @@ import Image from "next/image";
 import img from "../../public/images/toronto2.svg";
 import { useState } from "react";
 import sendContactForm from "../../lib/api";
-import CV from "../../components/Cv";
+import CV from "../../components/CV";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{1,23}\s[A-z][A-z0-9-_]{1,23}$/;
 const EMAIL_REGEX =
