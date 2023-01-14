@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { PostMetadata } from "./PostMetadata";
-
+//import { PostMetadata } from "./PostMetadata";
+/*
 const PostPreview = (props: PostMetadata) => {
   return (
     <Link href={`/posts/${props.slug}`}>
@@ -15,3 +15,4 @@ const PostPreview = (props: PostMetadata) => {
 };
 
 export default PostPreview;
+*/
