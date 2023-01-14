@@ -18,11 +18,11 @@ const Nav = () => {
     <nav className="flex items-center justify-between pt-5  ">
       <Image
         src={open ? iconClose : iconHamburger}
-        className="md:hidden  fixed right-5 cursor-pointer z-20 top-9  bg-gray-100 "
+        className="md:hidden h-8 w-8 fixed right-5 cursor-pointer z-20 top-8  bg-gray-100 dark:bg-black border-solid border-2 border-gray-100 "
         alt="icon"
         onClick={() => setopen(!open)}
       />
-      <div className=" relative h-10 w-10  overflow-hidden object-cover rounded-lg grayscale-60  ">
+      <div className=" relative h-10 w-10  overflow-hidden object-cover rounded-lg grayscale-60 left-4 ">
         <Link href="/">
           <Image
             src={logo}
@@ -50,9 +50,11 @@ const Nav = () => {
               >
                 <Link
                   href={menu.path}
-                  className="text-black dark:text-white cursor-pointer font-Barlow font-bold text-md inline-block md:py-5 py-3"
+                  className="text-black dark:text-white cursor-pointer font-Barlow font-bold text-3xl sm:text-xl inline-block md:py-5 py-3"
                 >
-                  <span className="font-bold mr-1.5">{/*index*/}</span>{" "}
+                  <span className="font-bold tracking-wider mr-1.5">
+                    {/*index*/}
+                  </span>{" "}
                   {menu.label}
                 </Link>
               </li>

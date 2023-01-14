@@ -3,6 +3,7 @@ title: "How did I build this website?"
 date: "2021-04-12"
 author: "ozan ocak"
 tags: ["hugo", "website", "git"]
+subtitle: "Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and configurability...."
 ---
 
 Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website.

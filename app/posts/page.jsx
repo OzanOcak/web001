@@ -1,7 +1,6 @@
 import Search from "../../components/Search";
-import getPostMetadata from "../../components/getPostMetadata";
+import getPostMetadata from "../../pages/getPostMetadata";
 import PostPreview from "../../components/PostPreview";
-import { log } from "console";
 
 const BlogPage = () => {
   const postMetadata = getPostMetadata();

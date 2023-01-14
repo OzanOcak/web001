@@ -13,7 +13,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="h-16 mb-14   items-center justify-between w-full">
+    <header className="h-16 mb-3   items-center justify-between w-full">
       {/*<div className="flex gap-4">
         <div className=" relative h-10 w-10  overflow-hidden object-cover rounded-lg grayscale-60  ">
           <Link href="/">
