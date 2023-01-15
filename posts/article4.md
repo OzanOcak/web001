@@ -3,7 +3,7 @@ title: "Writing a simple Linux Kernel on Armv8 - 3 "
 date: "2021-05-24"
 author: "ozan ocak"
 tags: ["aarch64", "kernel", "linux"]
-series: ["kernel development"]
+subtitle: "Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and configurability...."
 ---
 
 <h5>Kernel boot process preparation</h5>

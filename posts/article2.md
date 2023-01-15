@@ -3,7 +3,7 @@ title: "Writing a simple Linux Kernel-1"
 date: "2021-04-14"
 author: "ozan ocak"
 tags: ["aarch64", "docker", "linux"]
-series: ["kernel development"]
+subtitle: "Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and configurability...."
 ---
 
 <h3>Setting up aarch64 platform within docker container on x86 architecture</h3>

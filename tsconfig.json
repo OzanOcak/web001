@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "components/Button.jsx", "sections/Hero.js", "components/SearchBlog.jsx", "components/getPostMetadata.js", "app/posts/page.jsx", "app/about/page.jsx", "app/about/page.jsx", "pages/getPostMetadata.js", "pages/getPostMetadata.js"  ],
+, "components/Button.jsx", "sections/Hero.js", "components/SearchBlog.jsx", "components/getPostMetadata.js", "app/posts/page.jsx", "app/about/page.jsx", "app/about/page.jsx", "components/getPostMetadata.jsta.jcomponents/getPostMetadata.jsetadata.js", "components/Providers.jsx", "components/Providers.jsx", "components/DarkModeButton.jsx", "components/DarkModeButton.jsx", "app/page.jsx", "app/page.jsx", "app/layout.jsx", "app/layout.jsx", "app/head.jsx", "app/head.jsx", "app/posts/[slug]/page.jsx", "app/posts/[slug]/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

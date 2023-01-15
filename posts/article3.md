@@ -3,7 +3,7 @@ title: "Writing a simple Linux Kernel on Armv8 - 2"
 date: "2021-05-22"
 author: "ozan ocak"
 tags: ["aarch64", "kernel", "linux"]
-series: ["kernel development"]
+subtitle: "Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and configurability...."
 ---
 
 This is a documentation of writing bare operating system on hardware specifically on raspberry pi. This doc originally developed by Sergey Matyukevich then created another tutorial upon original project by Rocky Pulley.
