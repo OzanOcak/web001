@@ -1,11 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const SearchList = (props) => {
   const [searchValue, setSearchValue] = useState("");
-  const [blogs, setBlogs] = useState([]);
 
   const handleInput = (e) => {
     setSearchValue(e.target.value);
@@ -18,10 +17,6 @@ const SearchList = (props) => {
   });
   //console.log(filteredInputs); objects of an array
   filteredInputs.reverse();
-
-  useEffect(() => {
-    setBlogs(filteredInputs.reverse().slice(0, 3));
-  }, []);
 
   return (
     <>

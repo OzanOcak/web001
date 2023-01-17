@@ -1,9 +1,6 @@
 import GlowingBox from "../components/GlowingBox";
 import CGB from "../components/CenterGlowingBox";
 const Home2 = () => {
-  let content = {};
-  console.log(blogs);
-
   return (
     <div className="-mt-2 sm:-mt-[6rem] md:-mt-[18rem]">
       <ol className="relative border-l  border-green-200 dark:border-gray-700">

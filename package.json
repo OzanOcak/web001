@@ -7,11 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
-    
   },
   "dependencies": {
     "@headlessui/react": "^1.7.7",
     "@heroicons/react": "^2.0.13",
+    "@reduxjs/toolkit": "^1.9.1",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
@@ -22,8 +22,9 @@
     "next": "13.0.5",
     "next-themes": "^0.2.1",
     "nodemailer": "^6.8.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.3.0-next-ee8509801-20230117",
+    "react-dom": "^18.3.0-next-ee8509801-20230117",
+    "react-redux": "^8.0.5",
     "typescript": "4.9.3"
   },
   "devDependencies": {
