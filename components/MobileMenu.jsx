@@ -13,6 +13,7 @@ const Nav = () => {
     { label: "Home", path: "/" },
     { label: "Blog", path: "/posts" },
     { label: "About", path: "/about" },
+    { label: "Contact", path: "/contact" },
   ];
   return (
     <nav className="flex items-center justify-between pt-5  ">

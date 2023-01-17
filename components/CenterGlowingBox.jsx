@@ -8,9 +8,7 @@ const CGB = () => {
         <div className="m-8 relative space-y-4">
           <div className="p-5 bg-white rounded-lg flex items-center justify-between space-x-8 z-30">
             <div className="flex-1">
-              <div className="h-6 w-48 bg-gray-300 rounded font-bold px-2 dark:text-blue-700 z-20">
-                web design
-              </div>
+              <div className="h-6 w-48 bg-gray-300 rounded font-bold px-2 dark:text-blue-700 z-20"></div>
             </div>
             <div>
               <div className="w-6 sm:w-24 h-6 rounded-lg bg-blue-300"></div>
@@ -18,9 +16,7 @@ const CGB = () => {
           </div>
           <div className="p-5 bg-white rounded-lg flex items-center justify-between space-x-8">
             <div className="flex-1">
-              <div className="h-6 w-40 bg-gray-300 rounded font-bold px-2 dark:text-green-700 z-30">
-                full stack
-              </div>
+              <div className="h-6 w-40 bg-gray-300 rounded font-bold px-2 dark:text-green-700 z-30"></div>
             </div>
             <div>
               <div className="w-6 sm:w-20 h-6 rounded-lg bg-green-300 "></div>
@@ -28,9 +24,7 @@ const CGB = () => {
           </div>
           <div className="p-5 bg-white rounded-lg flex items-center justify-between space-x-8">
             <div className="flex-1">
-              <div className="h-6 w-44 bg-gray-300 rounded font-bold px-2 dark:text-red-700 z-30">
-                app development
-              </div>
+              <div className="h-6 w-44 bg-gray-300 rounded font-bold px-2 dark:text-red-700 z-30"></div>
             </div>
             <div>
               <div className="w-6 sm:w-28 h-6 rounded-lg bg-red-300"></div>

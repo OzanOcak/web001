@@ -1,22 +1,10 @@
 const CV = () => {
   return (
-    <div className="flex gap-x-10 mt-10">
-      <div className="w-2/6">
-        <strong className="text-xl font-medium">Contact Details</strong>
+    <div className="flex flex-col items-center  md:flex-row gap-x-10 mt-10">
+      <div className="justify-start w-2/6">
+        <strong className="text-xl font-medium">Ozan Ocak</strong>
 
         <ul className="mt-2 mb-10">
-          <li className="px-2 mt-1">
-            <strong className="mr-1">Phone </strong>
-            <a href="tel:+821023456789" className="block">
-              +1 111 1111 1111
-            </a>
-          </li>
-          <li className="px-2 mt-1">
-            <strong className="mr-1">E-mail </strong>
-            <a href="mailto:" className="block">
-              hello@hello.com
-            </a>
-          </li>
           <li className="px-2 mt-1">
             <strong className="mr-1">Location</strong>
             <span className="block">Toronto,Canada</span>
@@ -39,28 +27,28 @@ const CV = () => {
         <strong className="text-xl font-medium">Skills</strong>
         <ul className="mt-2 mb-10">
           <li className="px-2 mt-1">HTML</li>
-          <li className="px-2 mt-1">CSS</li>
+          <li className="px-2 mt-1">CSS & SASS & Tailwind</li>
           <li className="px-2 mt-1">JavaScript</li>
           <li className="px-2 mt-1">React</li>
           <li className="px-2 mt-1">Node.js</li>
+          <li className="px-2 mt-1">Next.js</li>
+          <li className="px-2 mt-1">C</li>
+          <li className="px-2 mt-1">Docker</li>
+          <li className="px-2 mt-1">SQL & NoSQL</li>
         </ul>
       </div>
 
-      <div className="w-4/6">
+      <div className=" w-full sm:w-4/6">
         <section>
           <h2 className="text-2xl pb-1 border-b font-semibold">About</h2>
           <p className="mt-4 text-xs">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
-            deserunt modi qui. Dolorum aliquid quasi velit cupiditate officia
-            magnam impedit, sapiente hic, eaque quaerat ullam fugiat
-            reprehenderit voluptates odit! Error. Tempore fuga iusto eveniet
-            omnis impedit repellat ab repellendus nesciunt similique. Iure
-            voluptates, enim nesciunt tempora amet earum, porro rem ad et sequi
-            corrupti neque quidem? Debitis quo quibusdam nemo. Nam doloremque
-            perferendis tempora asperiores, ullam praesentium et, voluptas
-            pariatur illo aliquid similique, fugiat repellendus ipsa
-            necessitatibus minus hic culpa quasi. Sed voluptate itaque
-            accusantium earum cupiditate ipsa neque magnam!
+            Hi, My name is Ozan Ocak, Experienced front-end developer with 6+
+            years of experience designing and building responsive web
+            applications using HTML,CSS, JavaScript, PHP, C#. I am also skilled
+            in Software Development Life Cycle and JavaScript Frameworks,
+            additionally I have good knowledge of C, JavaScript, browsers,
+            Docker, network communication, operating systems and programming
+            paradigms such as object-oriented and functional programming.
           </p>
         </section>
         <section>
@@ -70,7 +58,7 @@ const CV = () => {
           <ul className="mt-1">
             <li className="py-2">
               <div className="flex justify-between my-1">
-                <strong>Rules of 10000 hours</strong>
+                <strong>March of Dimes Canada</strong>
                 <p className="flex">
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
                     HTML
@@ -81,40 +69,41 @@ const CV = () => {
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
                     JS
                   </span>
+                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                    SharePoint
+                  </span>
                 </p>
               </div>
               <ul className="flex mb-2">
                 <li>
-                  <a
-                    href="#"
+                  <button
+                    href="https://www.marchofdimes.ca/en-ca"
                     className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded"
                   >
                     Live
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
+                  <button
                     href="#"
-                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded"
+                    disabled={true}
+                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded  disabled:bg-blue-200"
                   >
                     Code
-                  </a>
+                  </button>
                 </li>
               </ul>
               <p className="text-xs">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita delectus labore enim in minus quod vero dignissimos et,
-                ratione obcaecati quis maiores? Voluptatem, natus cupiditate
-                perferendis omnis ex hic incidunt! Earum dolore cupiditate sed
-                et maxime distinctio iure fugiat aspernatur at veniam laudantium
-                eveniet corporis dicta reiciendis quod consequatur, labore
-                perferendis dolorum velit quibusdam minus iste dolorem!
-                Officiis, obcaecati maxime
+                Have designed initial apperance of the web application, worked
+                on intigration to the SharePoint environtment and made it
+                accesiable for everyone. I have developed navigation and other
+                functionality with vanilla JavScript. I have created SharePonit
+                Components with vanilla JavaScript.
               </p>
             </li>
             <li className="py-2">
               <div className="flex justify-between my-1">
-                <strong>Vending Machine</strong>
+                <strong>MODC Employment Service</strong>
                 <p className="flex">
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
                     HTML
@@ -125,13 +114,19 @@ const CV = () => {
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
                     JS
                   </span>
+                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                    WordPress
+                  </span>
+                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                    Docker
+                  </span>
                 </p>
               </div>
               <ul className="flex mb-2">
                 <li>
                   <a
-                    href="#"
-                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded"
+                    href="http://www.modcemploymentservices.ca/"
+                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded "
                   >
                     Live
                   </a>
@@ -139,26 +134,22 @@ const CV = () => {
                 <li>
                   <a
                     href="#"
-                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded"
+                    disabled={true}
+                    className="bg-blue-200 text-white px-2 py-1 mr-1 text-sm rounded disabled:bg-blue-200"
                   >
                     Code
                   </a>
                 </li>
               </ul>
               <p className="text-xs">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                expedita illum optio porro suscipit rerum labore veritatis autem
-                eum totam veniam repudiandae repellendus perspiciatis eligendi
-                sequi maiores, cum ipsa ut! Dolorum aliquid quaerat, dolore
-                nemo, vero alias non porro quam totam impedit repellat voluptas,
-                nobis harum quae dolorem accusantium consequatur. Recusandae
-                cupiditate possimus natus consequuntur aliquid, molestias
-                provident saepe nobis.
+                Have set up docker environment consist of MySQL and WordPress
+                and maintained. designed custom WordPress framework with HTML,
+                CSS, JavaScript and PHP.
               </p>
             </li>
             <li className="py-2">
               <div className="flex justify-between my-1">
-                <strong>Landing Page</strong>
+                <strong>Blog Website</strong>
                 <p className="flex">
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
                     HTML
@@ -170,7 +161,7 @@ const CV = () => {
                     React
                   </span>
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
-                    Node.js
+                    Next.js
                   </span>
                 </p>
               </div>
@@ -193,61 +184,9 @@ const CV = () => {
                 </li>
               </ul>
               <p className="text-xs">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus, odio autem non possimus adipisci, sed sequi culpa ipsa
-                necessitatibus repellat rerum. Obcaecati nobis modi voluptate
-                nam minus praesentium soluta voluptatibus! Minima temporibus
-                deserunt laborum, expedita ad molestiae perferendis? Ipsa aut,
-                necessitatibus expedita rem iure minus sit voluptates magni,
-                sequi eum architecto excepturi tempora dolorum soluta quam odit
-                amet nobis incidunt.
-              </p>
-            </li>
-            <li className="py-2">
-              <div className="flex justify-between my-1">
-                <strong>Gamgyul Market</strong>
-                <p className="flex">
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
-                    HTML
-                  </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
-                    CSS
-                  </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
-                    React
-                  </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
-                    Node.js
-                  </span>
-                </p>
-              </div>
-              <ul className="flex mb-2">
-                <li>
-                  <a
-                    href="#"
-                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded"
-                  >
-                    Live
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded"
-                  >
-                    Code
-                  </a>
-                </li>
-              </ul>
-              <p className="text-xs">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Ducimus suscipit soluta at doloremque ipsa unde, doloribus
-                beatae delectus odio dolorum consequatur libero esse ratione
-                nostrum nihil quaerat alias cupiditate assumenda? Nesciunt unde
-                aliquid quam quisquam excepturi deserunt ipsa doloremque culpa
-                itaque. Esse consectetur odit est laboriosam facilis! Accusamus
-                inventore vel magni sed aliquid! Aspernatur dolores, nam id
-                fugit ad aliquam.
+                Have built React web app in the front-end,have used Next.js in
+                the back-end and extended its API as it is needed. Have designed
+                presentation with Tailwind CSS.
               </p>
             </li>
           </ul>
@@ -259,38 +198,79 @@ const CV = () => {
           <ul className="mt-2">
             <li className="pt-2">
               <p className="flex justify-between text-sm">
-                <strong className="text-base">Company Name</strong>2019-2021
+                <strong className="text-base">Contracts</strong>
+                03.2022 - now
               </p>
-              <p className="flex justify-between text-base">
-                Job title<small>location</small>
+              <p className="flex justify-between text-base mb-2">
+                Front-End Wed Developer<small>Toronto</small>
               </p>
-              <p className="text-justify text-xs">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorum, expedita exercitationem, cum quisquam laboriosam
-                voluptas aut libero officiis quae natus laborum explicabo,
-                labore nobis porro ad et soluta deleniti. Rerum? Voluptatibus id
-                officiis adipisci eligendi provident minima sed. Ullam aliquid,
-                fuga nisi modi amet quasi, quod veniam eos sit culpa distinctio
-                rem a tempora ad autem soluta rerum, doloremque quas?
-              </p>
+              <ul className="text-justify text-xs">
+                <li className="mb-1">
+                  Developed web applications with React.js
+                </li>
+                <li className="mb-1">
+                  Developed full-stack applications with Node.js and Next.js
+                </li>
+                <li className="mb-1">
+                  Experience with Express.js by using mongoose or prisma
+                  libraries.
+                </li>
+                <li className="mb-1">
+                  Utilizing CSS skills by using Tailwind css, designing mobile
+                  first responsive design.
+                </li>
+                <li className="mb-1">
+                  Developed APIs with MVP architecture by using Express.js
+                  within Node.js or Next.js
+                </li>
+                <li className="mb-1">
+                  Experienced with Object Data Modelling (ODM with )Mongoose and
+                  Object Relational Modelling (ORM) Prisma.
+                </li>
+                <li className="mb-1">
+                  Developed databases with NoSQL and as well as SQL including
+                  mongodb, postgres, mysql.
+                </li>
+              </ul>
             </li>
+
+            {/*---------------------------------------*/}
             <li className="pt-2">
               <p className="flex justify-between text-sm">
-                <strong className="text-base">Company Name</strong>2014-2019
+                <strong className="text-base">March of Dimes of Canada</strong>
+                09.2015-12.2021
               </p>
-              <p className="flex justify-between text-base">
-                Job title<small>location</small>
+              <p className="flex justify-between text-base mb-2">
+                Front-End Wed Developer<small>Toronto</small>
               </p>
-              <p className="text-justify text-xs">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus nemo fugiat neque tempore consectetur nihil alias ullam
-                esse corporis fugit deserunt maxime, numquam eos repellendus,
-                deleniti quae at fuga repudiandae! Perspiciatis odit nobis sunt!
-                Natus ea reiciendis enim! Itaque possimus eaque perspiciatis
-                architecto reiciendis laboriosam voluptas corporis unde ducimus
-                quis aliquid, distinctio dolorum quo ullam a at, fugit veniam
-                optio.
-              </p>
+              <ul className="text-justify text-xs">
+                <li className="mb-1">
+                  Developed WordPress theme with HTML5, CSS3, SASS, bootstrap,
+                  JavaScript and PHP for back-end set-up.
+                </li>
+                <li className="mb-1">
+                  Daily maintenance of code and debugging issues and
+                  collaborating with UX/UI team.
+                </li>
+                <li className="mb-1">
+                  Used OS-level virtualization with Docker for increasing
+                  efficiency and portability.
+                </li>
+                <li className="mb-1">
+                  Developed ASP.NET forms for the SharePoint hosted web apps.
+                </li>
+                <li className="mb-1">
+                  Daily maintenance of code, debugging issues.
+                </li>
+                <li className="mb-1">
+                  Developed a responsive front-end framework and theme with
+                  JavaScript, jQuery, HTML5 and CSS.
+                </li>
+                <li className="mb-1">
+                  Practiced agile work and version control in SharePoint
+                  platform.
+                </li>
+              </ul>
             </li>
           </ul>
         </section>
@@ -298,16 +278,17 @@ const CV = () => {
           <h2 className="text-2xl mt-6 pb-1 border-b font-semibold">
             Education
           </h2>
-          <ul className="mt-2">
+          <ul className="mt-2 ">
             <li className="pt-2">
               <p className="flex justify-between text-sm">
-                <strong className="text-base">
-                  Computer Engineering BS Degree
+                <strong className="text-base font-light">
+                  Wireless Networking PostGraduate Cretificate(1 year program),
+                  Toronto, Canada
                 </strong>
               </p>
-              <p className="flex justify-between text-sm">
-                <strong className="text-base">
-                  Wireless Networking PostGraduate Cretificate(1 year program)
+              <p className="flex justify-between text-sm ">
+                <strong className="text-base font-light">
+                  Computer Engineering BSc Degree, Ankara, Turkey
                 </strong>
               </p>
             </li>

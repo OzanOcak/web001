@@ -1,4 +1,4 @@
-const GlowingBox = () => {
+const GlowingBox = (props) => {
   return (
     <div className="px-0  sm:px-2 py-8 w-[20rem]">
       <div className="grid gap-8 items-start justify-start">
@@ -22,13 +22,7 @@ const GlowingBox = () => {
               </svg>
             </span>
             <span className="pl-2 sm:pl-6 text-black dark:text-white group-hover:text-blue-400 transition duration-200">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              doloribus sint sequi aut ex quas hic, magni modi fuga quo, quidem
-              ipsum tenetur non cupiditate illo, repudiandae ea omnis
-              perspiciatis!&rarr; Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Debitis doloribus sint sequi aut ex quas hic,
-              magni modi fuga quo, quidem ipsum tenetur non cupiditate illo,
-              repudiandae ea omnis perspiciatis
+              {props.content.text}
             </span>
           </div>
         </div>

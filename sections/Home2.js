@@ -1,8 +1,11 @@
 import GlowingBox from "../components/GlowingBox";
 import CGB from "../components/CenterGlowingBox";
 const Home2 = () => {
+  let content = {};
+  console.log(blogs);
+
   return (
-    <div className="-mt-2 sm:-mt-[17rem]">
+    <div className="-mt-2 sm:-mt-[6rem] md:-mt-[18rem]">
       <ol className="relative border-l  border-green-200 dark:border-gray-700">
         <li className="mb-10 ml-6">
           <span className="absolute flex items-center justify-center w-6 h-6 bg-green-500 rounded-full -left-3 sm:-right-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
@@ -20,7 +23,14 @@ const Home2 = () => {
               ></path>
             </svg>
           </span>
-          <GlowingBox />
+          <GlowingBox
+            content={{
+              text: `This website is developed to write my blogs about web development
+    particularly React and show the web and mobile application I have
+    been/will be developing. I try to use three main color red,green
+    and blue in the design of website.`,
+            }}
+          />
         </li>
         <li className="mb-10 ml-6">
           <span className="absolute flex items-center justify-center w-6 h-6 bg-red-500 rounded-full -left-3 sm:-right-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-900">
@@ -56,7 +66,7 @@ const Home2 = () => {
               ></path>
             </svg>
           </span>
-          <GlowingBox />
+          <GlowingBox content={{ text: "My latest Blog Posts" }} />
         </li>
       </ol>
     </div>
