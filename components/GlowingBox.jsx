@@ -1,9 +1,4 @@
-"use client";
-import { useSelector } from "react-redux";
-
 const GlowingBox = (props) => {
-  const { blogList } = useSelector((state) => state.blog);
-
   return (
     <div className="px-0  sm:px-2 py-8 w-[20rem]">
       <div className="grid gap-8 items-start justify-start">
@@ -27,7 +22,7 @@ const GlowingBox = (props) => {
               </svg>
             </span>
             <span className="pl-2 sm:pl-6 text-black dark:text-white group-hover:text-blue-400 transition duration-200">
-              {props.content.text} - {blogList.length}
+              {props.content.text}
             </span>
           </div>
         </div>

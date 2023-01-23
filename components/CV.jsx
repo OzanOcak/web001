@@ -1,3 +1,5 @@
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { SiMicrodotblog } from "react-icons/si";
 const CV = () => {
   return (
     <div className="flex flex-col items-center  md:flex-row gap-x-10 mt-10">
@@ -11,24 +13,29 @@ const CV = () => {
           </li>
         </ul>
 
-        <strong className="text-xl font-medium ">Github </strong>
-        <ul className="flex w-full mt-2 mb-10">
-          <li className="px-2 mt-2 w-4/12 bg-pink-600 text-white text-center rounded-tl-lg rounded-bl-lg">
-            HTML
+        <ul className="flex w-full mt-2 mb-10 gap-x-[2rem]">
+          <li className="text-2xl ">
+            <a href="https://www.github.com/ozanocak">
+              <BsGithub />
+            </a>
           </li>
-          <li className="px-2 mt-2 w-4/12 bg-blue-600 text-white text-center">
-            CSS
+          <li className="text-2xl ">
+            <a href="https://www.linkedin.com/in/ozanocak/">
+              <BsLinkedin />
+            </a>
           </li>
-          <li className="px-2 mt-2 w-5/12 bg-yellow-500 text-white text-center rounded-tr-lg rounded-br-lg">
-            JS
+          <li className="text-2xl ">
+            <a href="https://ozanocak.github.io/">
+              <SiMicrodotblog />
+            </a>
           </li>
         </ul>
 
         <strong className="text-xl font-medium">Skills</strong>
         <ul className="mt-2 mb-10">
-          <li className="px-2 mt-1">HTML</li>
-          <li className="px-2 mt-1">CSS & SASS & Tailwind</li>
           <li className="px-2 mt-1">JavaScript</li>
+          <li className="px-2 mt-1">TypeScript</li>
+          <li className="px-2 mt-1">CSS & SASS & Tailwind</li>
           <li className="px-2 mt-1">React</li>
           <li className="px-2 mt-1">Node.js</li>
           <li className="px-2 mt-1">Next.js</li>
@@ -61,13 +68,13 @@ const CV = () => {
                 <strong>March of Dimes Canada</strong>
                 <p className="flex">
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
-                    HTML
+                    JavaScript
+                  </span>
+                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                    React.JS
                   </span>
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
                     CSS
-                  </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
-                    JS
                   </span>
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
                     SharePoint
@@ -76,18 +83,18 @@ const CV = () => {
               </div>
               <ul className="flex mb-2">
                 <li>
-                  <button
+                  <a
                     href="https://www.marchofdimes.ca/en-ca"
-                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded"
+                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded hover:bg-blue-900"
                   >
                     Live
-                  </button>
+                  </a>
                 </li>
                 <li>
                   <button
                     href="#"
                     disabled={true}
-                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded  disabled:bg-blue-200"
+                    className="bg-blue-600 text-white px-2 py-[.2rem] mr-1 text-sm rounded  disabled:bg-blue-200"
                   >
                     Code
                   </button>
@@ -106,13 +113,13 @@ const CV = () => {
                 <strong>MODC Employment Service</strong>
                 <p className="flex">
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
-                    HTML
+                    JavaScript
+                  </span>
+                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                    PHP
                   </span>
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
                     CSS
-                  </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
-                    JS
                   </span>
                   <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
                     WordPress
@@ -126,7 +133,7 @@ const CV = () => {
                 <li>
                   <a
                     href="http://www.modcemploymentservices.ca/"
-                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded "
+                    className="bg-blue-600 text-white px-2 py-1 mr-1 text-sm rounded hover:bg-blue-900"
                   >
                     Live
                   </a>
@@ -147,7 +154,7 @@ const CV = () => {
                 CSS, JavaScript and PHP.
               </p>
             </li>
-            <li className="py-2">
+            {/*      <li className="py-2">
               <div className="flex justify-between my-1">
                 <strong>Blog Website</strong>
                 <p className="flex">
@@ -188,12 +195,12 @@ const CV = () => {
                 the back-end and extended its API as it is needed. Have designed
                 presentation with Tailwind CSS.
               </p>
-            </li>
+            </li> */}
           </ul>
         </section>
         <section>
           <h2 className="text-2xl mt-6 pb-1 border-b font-semibold">
-            Work Experiences
+            Work Experience
           </h2>
           <ul className="mt-2">
             <li className="pt-2">
@@ -275,22 +282,17 @@ const CV = () => {
           </ul>
         </section>
         <section>
-          <h2 className="text-2xl mt-6 pb-1 border-b font-semibold">
-            Education
-          </h2>
+          <h2 className="text-sm mt-6 pb-1 border-b ">Education</h2>
           <ul className="mt-2 ">
-            <li className="pt-2">
-              <p className="flex justify-between text-sm">
-                <strong className="text-base font-light">
-                  Wireless Networking PostGraduate Cretificate(1 year program),
-                  Toronto, Canada
-                </strong>
+            <li className="flex justify-between text-sm pt-2">
+              <p>
+                Wireless Networking PostGraduate Cretificate(1 year program),
               </p>
-              <p className="flex justify-between text-sm ">
-                <strong className="text-base font-light">
-                  Computer Engineering BSc Degree, Ankara, Turkey
-                </strong>
-              </p>
+              <p className=" text-sm">Toronto, Canada</p>
+            </li>
+            <li className="flex justify-between text-sm pt-2">
+              <p>Computer Engineering BSc Degree,</p>
+              <p className=" text-sm">Ankara, Turkey</p>
             </li>
           </ul>
         </section>
