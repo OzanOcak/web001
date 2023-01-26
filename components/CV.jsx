@@ -2,7 +2,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { SiMicrodotblog } from "react-icons/si";
 const CV = () => {
   return (
-    <div className="flex flex-col items-center  md:flex-row gap-x-10 mt-10">
+    <div className="flex flex-col items-center px-3  md:flex-row gap-x-10 mt-10">
       <div className="justify-start w-2/6">
         <strong className="text-xl font-medium">Ozan Ocak</strong>
 
@@ -66,17 +66,17 @@ const CV = () => {
             <li className="py-2">
               <div className="flex justify-between my-1">
                 <strong>March of Dimes Canada</strong>
-                <p className="flex">
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                <p className="flex flex-wrap">
+                  <span className="bg-gray-600 max-h-[1.4rem] text-white px-2 py-1 ml-1 text-xs rounded">
                     JavaScript
                   </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                  <span className="bg-gray-600 max-h-[1.4rem] text-white px-2 py-1 ml-1 text-xs rounded">
                     React.JS
                   </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                  <span className="bg-gray-600 max-h-[1.4rem] text-white px-2 py-1 ml-1 text-xs rounded">
                     CSS
                   </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                  <span className="bg-gray-600 max-h-[1.4rem] text-white px-2 py-1 ml-1 text-xs rounded">
                     SharePoint
                   </span>
                 </p>
@@ -111,20 +111,20 @@ const CV = () => {
             <li className="py-2">
               <div className="flex justify-between my-1">
                 <strong>MODC Employment Service</strong>
-                <p className="flex">
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                <p className="flex flex-wrap">
+                  <span className="bg-gray-600 max-h-[1.4rem] text-white px-2 py-1 ml-1 text-xs rounded">
                     JavaScript
                   </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                  <span className="bg-gray-600 max-h-[1.4rem] text-white px-2 py-1 ml-1 text-xs rounded">
                     PHP
                   </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                  <span className="bg-gray-600 max-h-[1.4rem] text-white px-2 py-1 ml-1 text-xs rounded">
                     CSS
                   </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                  <span className="bg-gray-600 max-h-[1.4rem] text-white px-2 py-1 ml-1 text-xs rounded">
                     WordPress
                   </span>
-                  <span className="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">
+                  <span className="bg-gray-600 max-h-[1.4rem] text-white px-2 py-1 ml-1 text-xs rounded">
                     Docker
                   </span>
                 </p>
@@ -211,30 +211,32 @@ const CV = () => {
               <p className="flex justify-between text-base mb-2">
                 Front-End Wed Developer<small>Toronto</small>
               </p>
-              <ul className="text-justify text-xs">
-                <li className="mb-1">
+              <ul className=" text-xs">
+                <li className="mb-[.2rem]">
                   Developed web applications with React.js
                 </li>
-                <li className="mb-1">
+                <li className="mb-[.2rem]">
                   Developed full-stack applications with Node.js and Next.js
                 </li>
-                <li className="mb-1">
+                <li className="mb-[.2rem]">
                   Experience with Express.js by using mongoose or prisma
                   libraries.
                 </li>
-                <li className="mb-1">
+                <li className="mb-[.2rem]">
                   Utilizing CSS skills by using Tailwind css, designing mobile
                   first responsive design.
                 </li>
-                <li className="mb-1">
+                <li className="mb-[.2rem]">
                   Developed APIs with MVP architecture by using Express.js
                   within Node.js or Next.js
                 </li>
-                <li className="mb-1">
-                  Experienced with Object Data Modelling (ODM with )Mongoose and
-                  Object Relational Modelling (ORM) Prisma.
+                <li className="mb-[.2rem]">
+                  <p>
+                    Experienced with Object Data Modelling (ODM with )Mongoose
+                    and Object Relational Modelling (ORM) Prisma.
+                  </p>
                 </li>
-                <li className="mb-1">
+                <li className="">
                   Developed databases with NoSQL and as well as SQL including
                   mongodb, postgres, mysql.
                 </li>
@@ -250,30 +252,30 @@ const CV = () => {
               <p className="flex justify-between text-base mb-2">
                 Front-End Wed Developer<small>Toronto</small>
               </p>
-              <ul className="text-justify text-xs">
-                <li className="mb-1">
+              <ul className=" text-xs">
+                <li className="mb-[.2rem]">
                   Developed WordPress theme with HTML5, CSS3, SASS, bootstrap,
                   JavaScript and PHP for back-end set-up.
                 </li>
-                <li className="mb-1">
+                <li className="mb-[.2rem]">
                   Daily maintenance of code and debugging issues and
                   collaborating with UX/UI team.
                 </li>
-                <li className="mb-1">
+                <li className="mb-[.2rem]">
                   Used OS-level virtualization with Docker for increasing
                   efficiency and portability.
                 </li>
-                <li className="mb-1">
+                <li className="mb-[.2rem]">
                   Developed ASP.NET forms for the SharePoint hosted web apps.
                 </li>
-                <li className="mb-1">
+                <li className="mb-[.2rem]">
                   Daily maintenance of code, debugging issues.
                 </li>
-                <li className="mb-1">
+                <li className="mb-[.2rem]">
                   Developed a responsive front-end framework and theme with
                   JavaScript, jQuery, HTML5 and CSS.
                 </li>
-                <li className="mb-1">
+                <li className="mb-[.2rem]">
                   Practiced agile work and version control in SharePoint
                   platform.
                 </li>
