@@ -1,4 +1,12 @@
-## Creating basic react app with CDN of React,React-Dom and babel
+---
+title: "Creating a react app with CDN of React,React-Dom and Babel"
+date: "2023-01-30"
+author: "ozan ocak"
+tags: ["React", "Babel", "React-Dom"]
+subtitle: "We will create the most basic react app with react,react-dom and babel libraries..."
+---
+
+## Creating a react app with CDN of React,React-Dom and Babel
 
 We will create the most basic react app with react,react-dom and babel libraries, first we will add the CDN of the libraries in to html file, Now we can create our virtual Dom tith help of React-dom librry and we can return jsx element in treact component to out virtual dom with help of babel tranpiler.
 
