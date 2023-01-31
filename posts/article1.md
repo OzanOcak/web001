@@ -1,84 +1,54 @@
----
-title: "How did I build this website?"
-date: "2021-04-12"
-author: "ozan ocak"
-tags: ["hugo", "website", "git"]
-subtitle: "Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and configurability...."
----
+## Creating basic react app with CDN of React,React-Dom and babel
 
-Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website.
+We will create the most basic react app with react,react-dom and babel libraries, first we will add the CDN of the libraries in to html file, Now we can create our virtual Dom tith help of React-dom librry and we can return jsx element in treact component to out virtual dom with help of babel tranpiler.
 
-I chose Hugo to this blog and store it in github as a static page. First I install hugo with brew then create 2 seperate github repository; one for all the source codes and the other for staic files in public folder.
+### React and React-dom libraries
 
-```bash
-brew  install hugo
+We satrt crateing a html file then add reactdom and react packages
 
-hugo new site my_blog
+```html
+<div id="root"></div>
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.development.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+></script>
 ```
 
-After Hugo set up initial folders and files, I wanted fetch one of hugo theme with git submodule. Git submodules allow you to keep a git repository as a subdirectory of another git repository.
+within script tag, we can create React element in a javascrict function then render it and finally we can inject it into html element which has id named root.
 
-```bash
-git init .
+```javascript
+const Greeting = () => {
+  return React.createElement(
+    "h1",
+    { style: { color: "blue" } },
+    "Hello React!!!"
+  );
+};
 
-cd my_blog/themes
-
-git submodule add https://github.com/WingLim/hugo-tania
+const rootNode = document.getElementById("root");
+const root = ReactDOM.createRoot(rootNode);
+root.render(Greeting());
 ```
 
-Hugo uses the config.toml, config.yaml, or config.json as the default site config file. I prefred to use toml which is another file format for configuration files.
+note that Since Greeting is a function, it needs to be called
 
-```bash
-mv config.toml config.yaml
+You can see the [code](https://github.com/OzanOcak/react-proj-std/blob/main/react-basics/01/index.html)
 
-vim config.yaml
+### JSX
 
-baseURL: "https://bitsandbytes.github.io"
-languageCode: "en-us"
-title: "fascinating journey of bits and bytes"
-theme: "hugo-tania"
+We can write html like syntax within javascript file with jsx files, in oreder to do that we need to compile jsx to js with babel
+
+```html
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 ```
 
-Now I can start deamon process to serve the website in localhost thanks to golang.
+and we can create react element without React.createElement() after adding
+**<script type="text/babel">**
 
-```bash
-hugo server
-
-hugo new post/hello.md
-
-git clone ozanocak.github.io.git
-
-git checkout -b main (now it is master branch)
-```
-
-Checking out main branch in cloned git repository makes it master page so I don't need to explicitly add remote connection to the repository.
-
-```bash
-touch readme.md
-git add .
-git commit -m "readme.md"
-push -u origin main
-
-git submodule  add -b main ozanocak.github.io.git public
-
-hugo -t hugo-tania
-```
-
-when I cd public & git remote -v , I see origin is the host directory because I branched&pushed it already to the repository.Finally I can add changes git.
-
-When I need to update the website, I need to go to directory where yaml config file located to generate updated binary files and push the changes to github page.
-
-```bash
-hugo
-git status
-git add .
-git commit -m "some changes"
-git push -u origin main
-```
-
-To see the changes in local host we need to use -D flag because the files as default are draft which are not appear in localhost.
-
-```bash
-hugo new about.md
-hugo server -D
+```javascript
+const Greeting = () => <h1>Hello React with JSX!!!</h1>;
 ```
