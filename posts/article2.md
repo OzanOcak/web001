@@ -1,34 +1,32 @@
 ---
-title: "Writing a simple Linux Kernel-1"
-date: "2021-04-14"
+title: "Deployment of Next.JS App into Vercel"
+date: "2023-01-31"
 author: "ozan ocak"
-tags: ["aarch64", "docker", "linux"]
-subtitle: "Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and configurability...."
+tags: ["React", "Next.Js", "Vercel"]
+subtitle: "We will create the most basic react app with react,react-dom and babel libraries..."
 ---
 
-<h3>Setting up aarch64 platform within docker container on x86 architecture</h3>
+## Deployment of Next.JS App into Vercel
 
-Docker Desktop for Mac ships with hypervisors for the host OS. The hypervisor is responsible for running a lightweight Linux kernel (LinuxKit), which is included as part of Docker Desktop. This lightweight container OS comes packaged with the QEMU emulator, and comes pre-configured with binfmt_misc to run binaries of any supported architecture. Binfmt_misc is a kernel subsystem which allows to set the magic numbers of a binary file to specific actions for their execution.
+```console
+npm i -g vercel
 
-![arm64 docker on x86](/img/docker_emu.png)
+vercel
+vercel --prod
 
-```bash
-docker run --rm -t arm64v8/ubuntu uname -m
-docker container ls
-docker exec -it <container_id> /bin/bash
 ```
 
-When we run docker image, docker cli pull the img than we execute it in bash terminal of the container.
+Setting>Environment Variables
 
-```bash
-uname -a
-Linux dfe4f9696511 4.19.121-linuxkit SMP Tue Dec 1 17:50:32 UTC 2020 aarch64 GNU/Linux
+.env
+
+```console
+NEXT_PUBPLIC_SAMPLE=
+NEXT_PUBPLIC_PASS=
 ```
 
-We can see linuxkit as the running operating sysyem of the container. Now that we create the enviroment for little kernel, we can install cross compiler(gcc) and a text editor.
+or
 
-```bash
-apt update
-apt install gcc-aarch64-linux-gnu
-apt install vim
+```console
+vercel env add NEXT_PUBPLIC_SAMPLE
 ```
