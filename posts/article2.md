@@ -3,7 +3,8 @@ title: "Deployment of Next.JS App into Vercel"
 date: "2023-01-31"
 author: "ozan ocak"
 tags: ["React", "Next.Js", "Vercel"]
-subtitle: "We will create the most basic react app with react,react-dom and babel libraries..."
+subtitle: "Setting up vercel cli makes deployment easier,first we need install vercel via npm then
+we can deploy it with vercel command..."
 ---
 
 ## Deployment of Next.JS App into Vercel
