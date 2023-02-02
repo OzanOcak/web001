@@ -8,6 +8,9 @@ subtitle: "We will create the most basic react app with react,react-dom and babe
 
 ## Deployment of Next.JS App into Vercel
 
+Setting up vercel cli makes deployment easier,first we need install vercel via npm then
+we can deploy it with vercel command
+
 ```console
 npm i -g vercel
 
@@ -16,7 +19,7 @@ vercel --prod
 
 ```
 
-Setting>Environment Variables
+From vercel, we can go settings tab than evironment variables to enter .env variables
 
 .env
 
@@ -25,8 +28,10 @@ NEXT_PUBPLIC_SAMPLE=
 NEXT_PUBPLIC_PASS=
 ```
 
-or
+or we can use verl cli to add environtment variables into the vercel
 
 ```console
 vercel env add NEXT_PUBPLIC_SAMPLE
 ```
+
+### Domain Name:
