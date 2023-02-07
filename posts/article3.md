@@ -8,8 +8,8 @@ subtitle: "React app starts from index.js (or main.js if you use vite)..."
 
 ## React Basics
 
-React app starts from index.js (or main.js if you use vite). End of the file ReactDom renders the virtual Dom
-and start observing changes in the state of dom by using diffing algorith.
+React app starts from index.js (or main.js if you use vite). End of the index.js, ReactDom renders jsx elements to virtual Dom
+and start observing changes of state of virtual dom by using diffing algorith.
 
 ```javascript
 ReactDOM.render(
@@ -20,7 +20,7 @@ ReactDOM.render(
 );
 ```
 
-we can replace **<h1>hello world from JSX!</h1>** with <App/> but if we want to place more react element or component, we need to wrap
+we can replace **<h4>hello world from JSX!</h4>** with <App/> but if we want to place more react element or component, we need to wrap
 it with **<> </>** . We can also put there react component just like above code and define <App /> somewhere above in the file.
 
 ```javascript

@@ -37,7 +37,7 @@ vercel env add NEXT_PUBPLIC_SAMPLE
 
 ### Domain Name:
 
-Under Sewttings we need to enter our domain name into input container. Then we need to configure our
-domain. Than we need to get CNAME and A records from varcel and enter them into dns records in our desired hosting company.
+Under Settings we need to enter our domain name into input container. Then we need to configure our
+domain. Than we need to get **CNAME** and **A** records from varcel and enter them into dns records in our desired hosting company.
 
 Nove we can deploy our github code into production with **vercel --prod** command
