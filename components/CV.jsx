@@ -203,46 +203,6 @@ const CV = () => {
             Work Experience
           </h2>
           <ul className="mt-2">
-            <li className="pt-2">
-              <p className="flex justify-between text-sm">
-                <strong className="text-base">Contracts</strong>
-                03.2022 - now
-              </p>
-              <p className="flex justify-between text-base mb-2">
-                Front-End Wed Developer<small>Toronto</small>
-              </p>
-              <ul className=" text-xs">
-                <li className="mb-[.2rem]">
-                  Developed web applications with React.js
-                </li>
-                <li className="mb-[.2rem]">
-                  Developed full-stack applications with Node.js and Next.js
-                </li>
-                <li className="mb-[.2rem]">
-                  Experience with Express.js by using mongoose or prisma
-                  libraries.
-                </li>
-                <li className="mb-[.2rem]">
-                  Utilizing CSS skills by using Tailwind css, designing mobile
-                  first responsive design.
-                </li>
-                <li className="mb-[.2rem]">
-                  Developed APIs with MVP architecture by using Express.js
-                  within Node.js or Next.js
-                </li>
-                <li className="mb-[.2rem]">
-                  <p>
-                    Experienced with Object Data Modelling (ODM with )Mongoose
-                    and Object Relational Modelling (ORM) Prisma.
-                  </p>
-                </li>
-                <li className="">
-                  Developed databases with NoSQL and as well as SQL including
-                  mongodb, postgres, mysql.
-                </li>
-              </ul>
-            </li>
-
             {/*---------------------------------------*/}
             <li className="pt-2">
               <p className="flex justify-between text-sm">
@@ -278,6 +238,34 @@ const CV = () => {
                 <li className="mb-[.2rem]">
                   Practiced agile work and version control in SharePoint
                   platform.
+                </li>
+                <li className="mb-[.2rem]">
+                  Developed web applications with React.js
+                </li>
+                <li className="mb-[.2rem]">
+                  Developed full-stack applications with Node.js and Next.js
+                </li>
+                <li className="mb-[.2rem]">
+                  Experience with Express.js by using mongoose or prisma
+                  libraries.
+                </li>
+                <li className="mb-[.2rem]">
+                  Utilizing CSS skills by using Tailwind css, designing mobile
+                  first responsive design.
+                </li>
+                <li className="mb-[.2rem]">
+                  Developed APIs with MVP architecture by using Express.js
+                  within Node.js or Next.js
+                </li>
+                <li className="mb-[.2rem]">
+                  <p>
+                    Experienced with Object Data Modelling (ODM with )Mongoose
+                    and Object Relational Modelling (ORM) Prisma.
+                  </p>
+                </li>
+                <li className="">
+                  Developed databases with NoSQL and as well as SQL including
+                  mongodb, postgres, mysql.
                 </li>
               </ul>
             </li>
