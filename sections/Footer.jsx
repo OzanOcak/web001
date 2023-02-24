@@ -1,28 +1,33 @@
 import Link from "next/link";
 import Button from "../components/Button";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { SiMicrodotblog } from "react-icons/si";
+import { SiMicrodotblog, SiCodesandbox } from "react-icons/si";
 
 const Footer = () => {
   return (
     <footer className="py-6 text-center text-gray-500 text-sm ">
       <div className="footer-2 bg-white-100 pt-6 md:pt-12">
         <div className="container px-4 mx-auto">
-          <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12">
+          <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12 ">
             <ul className="flex justify-center w-full mt-2 mb-10 gap-x-[2rem]">
-              <li className="text-2xl ">
+              <li className="text-3xl ">
                 <a href="https://www.github.com/ozanocak">
                   <BsGithub />
                 </a>
               </li>
-              <li className="text-2xl ">
+              <li className="text-3xl ">
                 <a href="https://www.linkedin.com/in/ozanocak/">
                   <BsLinkedin />
                 </a>
               </li>
-              <li className="text-2xl ">
+              <li className="text-3xl ">
                 <a href="https://ozanocak.github.io/">
                   <SiMicrodotblog />
+                </a>
+              </li>
+              <li className="text-3xl ">
+                <a href="https://codesandbox.io/u/OzanOcak">
+                  <SiCodesandbox />
                 </a>
               </li>
             </ul>
