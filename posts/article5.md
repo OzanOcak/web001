@@ -1,139 +1,79 @@
 ---
-title: "Writing a simple Linux Kernel on Armv8 -4 "
-date: "2021-05-26"
+title: "Understanding useReducer"
+date: "2021-03-01"
 author: "ozan ocak"
-tags: ["aarch64", "kernel", "linux"]
-subtitle: "Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and configurability...."
+tags: ["React", "javascript", "hooks", "useReducer"]
+subtitle: "useReducer also itarates, it takes 2 arguments; method and state while it returns state and method...."
 ---
 
-<h5>GPIO of Arm</h5>
+## UseReducer
 
-We take the GPIO information from Broadcast Arm cpu booklet in gpio chapters
+We need to understand reducer first because useReducer has the same functionality with the javascript method.
 
-```gpio.h
+```javascript
+const totalGrade = studs.reduce((total, stud) => {
+  console.log(`total: ${total}`);
+  console.log(`stud grade: ${stud.grade}`);
 
-#pragma once
-
-#include "peripherals/gpio.h"
-
-typedef enum _GpioFunc {
-    GFInput = 0,
-    GFOutput = 1,
-    GFAlt0 = 4,
-    GFAlt1 = 5,
-    GFAlt2 = 6,
-    GFAlt3 = 7,
-    GFAlt4 = 3,
-    GFAlt5 = 2
-} GpioFunc;
-
-void gpio_pin_set_func(u8 pinNumber, GpioFunc func);
-
-void gpio_pin_enable(u8 pinNumber);
-
+  return total + stud.grade;
+}, 0); // total is 0
 ```
 
-Now we can write gpio.c file. we first locate bits with and gate then set them with or gate.
+Reducer method is just like forEach that itereates arrays and you need to assign return value.
+useReducer also itarates, it takes 2 arguments; method and state while it returns
+state and method
 
-```gpio.c
-#include "gpio.h"
-#include "utils.h"
+```js
+const [state, dispatch] = useReducer(reducer, { count: 0 });
+```
 
-void gpio_pin_set_func(u8 pinNumber, GpioFunc func) {
-    u8 bitStart = (pinNumber * 3) % 30;
-    u8 reg = pinNumber / 10;
+reducer methodis just lile js reduce method
 
-    u32 selector = REGS_GPIO->func_select[reg];
-    selector &= ~(7 << bitStart);
-    selector |= (func << bitStart);
-
-    REGS_GPIO->func_select[reg] = selector;
-}
-
-void gpio_pin_enable(u8 pinNumber) {
-    REGS_GPIO->pupd_enable = 0;
-    delay(150);
-    REGS_GPIO->pupd_enable_clocks[pinNumber / 32] = 1 << (pinNumber % 32);
-    delay(150);
-    REGS_GPIO->pupd_enable = 0;
-    REGS_GPIO->pupd_enable_clocks[pinNumber / 32] = 0;
+```js
+function reducer(state, action) {
+  return { count: state.count + 1 };
 }
 ```
 
-<h5>Mini uart connection</h5>
-First define all the function to send the data
+we need to call dispatch method when we click on button with in jsx
 
-```mini_uart.h
-#pragma once
+```jsx
+<button onClick={increment}>+</button>
+```
 
-void uart_init();
-char uart_recv();
-void uart_send(char c);
-void uart_send_string(char *str);
+which will call increment function which call dispatch() method.
+But this calls only one method so we can pass type in dispatch methods
+
+```js
+function increment() {
+  dispatch({ type: "increment" });
+}
+```
+
+and we can recieve action.type arguments then pick the right one with switch case
+
+```js
+function reducer(state, action) {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
 
 ```
 
-Then the implementation of the functions in order to enable gpio pins and send string via uart
+We can finally add constant values instead of giving error probe strings
 
-```mini_uart.c
+```js
+const ACTIONS = {
+  INCREMENT: "icrement",
+  DECREMENT: "decrement",
+};
 
-#include "gpio.h"
-#include "utils.h"
-#include "peripherals/aux.h"
-#include "mini_uart.h"
-
-#define TXD 14
-#define RXD 15
-
-void uart_init() {
-    gpio_pin_set_func(TXD, GFAlt5);
-    gpio_pin_set_func(RXD, GFAlt5);
-
-    gpio_pin_enable(TXD);
-    gpio_pin_enable(RXD);
-
-    REGS_AUX->enables = 1;
-    REGS_AUX->mu_control = 0;
-    REGS_AUX->mu_ier = 0;
-    REGS_AUX->mu_lcr = 3;
-    REGS_AUX->mu_mcr = 0;
-
-#if RPI_VERSION == 3
-    REGS_AUX->mu_baud_rate = 270; // = 115200 @ 250 Mhz
-#endif
-
-#if RPI_VERSION == 4
-    REGS_AUX->mu_baud_rate = 541; // = 115200 @ 500 Mhz
-#endif
-
-    REGS_AUX->mu_control = 3;
-
-    uart_send('\r');
-    uart_send('\n');
-    uart_send('\n');
-}
-
-void uart_send(char c) {
-    while(!(REGS_AUX->mu_lsr & 0x20));
-
-    REGS_AUX->mu_io = c;
-}
-
-char uart_recv() {
-    while(!(REGS_AUX->mu_lsr & 1));
-
-    return REGS_AUX->mu_io & 0xFF;
-}
-
-void uart_send_string(char *str) {
-    while(*str) {
-        if (*str == '\n') {
-            uart_send('\r');
-        }
-
-        uart_send(*str);
-        str++;
-    }
-}
+function reducer(state, action) {
+  switch (action.type) {
+    case ACTIONS.INCREMENT:
 
 ```
+
+and dispatch them with constant values
+
+you can find the in the [link](https://codesandbox.io/s/usereducer-o22mqr)
