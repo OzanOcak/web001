@@ -76,4 +76,4 @@ function reducer(state, action) {
 
 and dispatch them with constant values
 
-you can find the in the [link](https://codesandbox.io/s/usereducer-o22mqr)
+you can find the source code in the [link](https://codesandbox.io/s/usereducer-o22mqr)
